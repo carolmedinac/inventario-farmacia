@@ -30,7 +30,7 @@
 
     <!-- Load polyfills -->
     <script src="/assets/vendor/js/polyfills.js"></script>
-    <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+    <script>document['documentMode'] === 10 && document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
 
     <script src="/assets/vendor/js/material-ripple.js"></script>
     <script src="/assets/vendor/js/layout-helpers.js"></script>
@@ -44,7 +44,6 @@
           themesPath: '/assets/vendor/css/rtl/'
         });
     </script> -->
-
     <!-- Core scripts -->
     <script src="/assets/vendor/js/pace.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -89,9 +88,15 @@
                             <div>Inventario</div>
                         </a>
                         <ul class="sidenav-menu">
-                            <li class="sidenav-item active">
+                            <li class="sidenav-item ">
                                 <a href="javascript:void(0)" class="sidenav-link">
                                     <div><i class="fas fa-list"></i> Lista De Producto</div>
+                                </a>
+                            </li>
+
+                            <li class="sidenav-item ">
+                                <a href="javascript:void(0)" class="sidenav-link">
+                                    <div><i class="fas fa-plus-circle"></i> Agregar </div>
                                 </a>
                             </li>
                         </ul>
@@ -120,14 +125,14 @@
                         <hr class="d-lg-none w-100 my-2">
 
                         @*<div class="navbar-nav align-items-lg-center">
-                            <!-- Search -->
-                            <label class="nav-item navbar-text navbar-search-box p-0 active">
-                            <i class="ion ion-ios-search navbar-icon align-middle"></i>
-                            <span class="navbar-search-input pl-2">
-                            <input type="text" class="form-control navbar-text mx-2" placeholder="Search..." style="width:200px">
-                            </span>
-                            </label>
-                            </div>*@
+                        <!-- Search -->
+                        <label class="nav-item navbar-text navbar-search-box p-0 active">
+                        <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                        <span class="navbar-search-input pl-2">
+                        <input type="text" class="form-control navbar-text mx-2" placeholder="Search..." style="width:200px">
+                        </span>
+                        </label>
+                        </div>*@
 
                         <div class="navbar-nav align-items-lg-center ml-auto">
                             <div class="demo-navbar-user nav-item">
