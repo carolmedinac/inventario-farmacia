@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" class="light-style">
+
+<head>
+    <title>C3.js - Charts - Appwork</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+    <!-- Icon fonts -->
+    <link rel="stylesheet" href="/assets/vendor/fonts/fontawesome.css">
+    <link rel="stylesheet" href="/assets/vendor/fonts/ionicons.css">
+    <link rel="stylesheet" href="/assets/vendor/fonts/linearicons.css">
+    <link rel="stylesheet" href="/assets/vendor/fonts/open-iconic.css">
+    <link rel="stylesheet" href="/assets/vendor/fonts/pe-icon-7-stroke.css">
+
+    <!-- Core stylesheets -->
+    <link rel="stylesheet" href="/assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+    <link rel="stylesheet" href="/assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+    <link rel="stylesheet" href="/assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+    <link rel="stylesheet" href="/assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+    <link rel="stylesheet" href="/assets/vendor/css/rtl/uikit.css">
+    <link rel="stylesheet" href="/assets/css/demo.css">
+
+    <!-- Load polyfills -->
+    <script src="/assets/vendor/js/polyfills.js"></script>
+    <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+    <script src="/assets/vendor/js/material-ripple.js"></script>
+    <script src="/assets/vendor/js/layout-helpers.js"></script>
+
+    <!-- Theme settings -->
+    <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section
+    <script src="/assets/vendor/js/theme-settings.js"></script>
+    <script>
+        window.themeSettings = new ThemeSettings({
+          cssPath: '/assets/vendor/css/rtl/',
+          themesPath: '/assets/vendor/css/rtl/'
+        });
+    </script> -->
+
+    <!-- Core scripts -->
+    <script src="/assets/vendor/js/pace.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Libs -->
+    <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/assets/vendor/libs/c3/c3.css">
+</head>
+
+<body>
+    <div class="page-loader">
+        <div class="bg-primary"></div>
+    </div>
+
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-2">
+        <div class="layout-inner">
+
+            <!-- Layout sidenav -->
+            <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-dark">
+
+                <!--************** Version WEB **************-->
+                <div class="app-brand demo" style="padding-left:0;">
+
+                    <a href="#" class="app-brand-text demo sidenav-text font-weight-normal ml-4">
+                        <i class="fas fa-home"></i>&nbsp;Farmacia Flor
+                    </a>
+
+                    <a href="javascript:void(0)" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
+                        <i class="ion ion-md-menu align-middle"></i>
+                    </a>
+                </div>
+
+                <div class="sidenav-divider mt-0"></div>
+
+                <!--*************************** MENU ***************************-->
+                <ul class="sidenav-inner py-1">
+
+                    <li class="sidenav-item">
+                        <a href="javascript:void(0)" class="sidenav-link sidenav-toggle">
+                            <i class="sidenav-icon fas fa-user-friends"></i>
+                            <div>Inventario</div>
+                        </a>
+                        <ul class="sidenav-menu">
+                            <li class="sidenav-item active">
+                                <a href="javascript:void(0)" class="sidenav-link">
+                                    <div><i class="fas fa-list"></i> Lista De Producto</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!--*************************** MENU FIN ***************************-->
+
+            </div>
+
+            <div class="layout-container">
+
+                <nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center container-p-x bg-navbar-theme" id="layout-navbar">
+
+                    <!--************** Version Movil **************-->
+                    <!-- Sidenav toggle (see assets/css/demo/demo.css) -->
+                    <div class="layout-sidenav-toggle navbar-nav d-lg-none align-items-lg-center mr-auto">
+                        <a class="nav-item nav-link px-0 mr-lg-4" href="javascript:void(0)">
+                            <i class="ion ion-md-menu text-large align-middle"></i>
+                        </a>
+                    </div>
+
+
+                    <div class="navbar-collapse collapse" id="layout-navbar-collapse">
+                        <!-- Divider -->
+                        <hr class="d-lg-none w-100 my-2">
+
+                        @*<div class="navbar-nav align-items-lg-center">
+                            <!-- Search -->
+                            <label class="nav-item navbar-text navbar-search-box p-0 active">
+                            <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                            <span class="navbar-search-input pl-2">
+                            <input type="text" class="form-control navbar-text mx-2" placeholder="Search..." style="width:200px">
+                            </span>
+                            </label>
+                            </div>*@
+
+                        <div class="navbar-nav align-items-lg-center ml-auto">
+                            <div class="demo-navbar-user nav-item">
+                                <a class="nav-link">
+                                    <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
+                                        @*<img src="assets/img/avatars/1.png" alt="" class="d-block ui-w-30 rounded-circle">*@
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <!-- Layout content -->
+                <div class="layout-content">
+                    @RenderBody()
+                </div>
+            </div>
+            <!-- / Layout container -->
+        </div>
+        <!-- Overlay -->
+        <div class="layout-overlay layout-sidenav-toggle"></div>
+    </div>
+
+    <!-- / Layout wrapper -->
+    <!-- Core scripts -->
+    <script src="/assets/vendor/libs/popper/popper.js"></script>
+    <script src="/assets/vendor/js/bootstrap.js"></script>
+    <script src="/assets/vendor/js/sidenav.js"></script>
+
+    <!-- Libs -->
+    <script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/assets/vendor/libs/d3/d3.js"></script>
+    <script src="/assets/vendor/libs/c3/c3.js"></script>
+
+    <!-- Demo -->
+    <script src="/assets/js/demo.js"></script>
+    <script src="/assets/js/charts_c3.js"></script>
+</body>
+
+</html>
